@@ -1,6 +1,8 @@
 namespace Models.Session;
 
-public class UploadSessionId
+public readonly record struct SessionId(Guid Value)
 {
-    
+    public static SessionId New() => new(Guid.NewGuid());
+
+    public override string ToString() => Value.ToString();
 }

@@ -1,6 +1,8 @@
+using Models.Messages;
+
 namespace Models.Commands;
 
-public class IControlCommand
+public interface IControlCommand
 {
-    
+     ControlMessageType Type { get; }
 }

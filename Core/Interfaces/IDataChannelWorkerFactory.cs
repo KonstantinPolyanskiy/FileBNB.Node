@@ -1,6 +1,9 @@
+using Core.Workers;
+using Models.Commands;
+
 namespace Core.Interfaces;
 
-public class IDataChannelWorkerFactory
+public interface IDataChannelWorkerFactory
 {
-    
+    BaseChannelWorker? Create(IControlCommand command);
 }
